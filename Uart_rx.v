@@ -1,17 +1,4 @@
 `timescale 1ns / 1ps
-// =============================================================================
-// Module      : uart_rx.v
-// Description : Enhanced UART Receiver
-//               - 16x oversampling for robust bit detection
-//               - 8-deep receive FIFO
-//               - Parity checking (none / even / odd)
-//               - Configurable data bits (7 or 8)
-//               - Error flags: parity error, framing error, overrun error
-//               - False-start-bit rejection
-//               - Majority voting on sampled bits (noise immunity)
-// Author      : Enhanced UART Project
-// =============================================================================
-
 module uart_rx #(
     parameter CLK_FREQ   = 50_000_000,
     parameter BAUD_RATE  = 115200,
